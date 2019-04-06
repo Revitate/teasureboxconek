@@ -1,0 +1,37 @@
+$waveSpeed: 10;
+$boatWidth: 250px;
+$boatY: 30px;
+
+$waveFront: #0cabaa;
+$waveBack: #108291;
+$sky1: #a5e1dd;
+$sky2: #d3ede2;
+$hull: #473322;
+$mast: #674333;
+$sail: #f2edea;
+$flag: #ff90aa;
+
+.boat-anime {
+    display: inline;
+    position: fixed;
+    bottom: 55px;
+    left: 50%;
+    margin-left: -$boatWidth/2;
+    animation: boat 3.5s cubic-bezier(0.35, 0.07, 0.35, 0.94) alternate infinite;
+    animation-delay: 0s;
+    transition: all 1s ease;
+}
+
+.boat {
+    width: 250px;
+    height: auto;
+}
+
+@keyframes boat {
+    0% {
+        bottom: $boatY;
+    }
+    100% {
+        bottom: $boatY + 120;
+    }
+}
